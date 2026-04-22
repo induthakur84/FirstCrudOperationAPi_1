@@ -7,5 +7,6 @@ namespace FirstCrudOperationAPi.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        //this is a simple in-memory list to store users for demonstration purposes
     }
 }
