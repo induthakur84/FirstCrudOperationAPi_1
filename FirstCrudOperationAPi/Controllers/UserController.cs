@@ -1,7 +1,6 @@
 ﻿using FirstCrudOperationAPi.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
 
 namespace FirstCrudOperationAPi.Controllers
 {
@@ -19,9 +18,9 @@ namespace FirstCrudOperationAPi.Controllers
         //Get : api/User/GetAll
 
         [HttpGet("GetAll")]
-        public IActionResult GetAll( )
+        public  async IActionResult GetAll( )
         {
-            var users = _context.Users.ToList();
+            var users =await _context.Users.ToListAsync();
             return Ok(users);  //200
         }
 
@@ -46,7 +45,7 @@ namespace FirstCrudOperationAPi.Controllers
 
         //one thread getall records from the database  it will 2 minutes
 
-        // your is block in 2 minutes
+        // your thead a is block in 2 minutes
 
 
 
