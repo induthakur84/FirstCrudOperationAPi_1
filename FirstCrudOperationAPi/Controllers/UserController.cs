@@ -18,9 +18,9 @@ namespace FirstCrudOperationAPi.Controllers
         //Get : api/User/GetAll
 
         [HttpGet("GetAll")]
-        public  async IActionResult GetAll( )
+        public  IActionResult GetAll( )
         {
-            var users =await _context.Users.ToListAsync();
+            var users = _context.Users.ToListAsync();
             return Ok(users);  //200
         }
 
